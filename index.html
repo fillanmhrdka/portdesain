@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portofolio Desain — Fill's</title>
+  <meta name="description" content="Portofolio desain grafis: banner, poster, dan kartu nama.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="atas">
+
+  <!--
+  =====================================================================
+  CARA MENGGANTI KARYA
+  1. Taruh gambar desain di folder "images" (sebelahan sama file ini).
+  2. Nama file default: banner-1.jpg ... banner-4.jpg,
+     poster-1.jpg ... poster-4.jpg, kartu-1.jpg ... kartu-3.jpg
+     (atau ganti path-nya di atribut style="--img:url('...')").
+  3. Selama gambar belum ada, yang tampil adalah placeholder warna gradasi.
+  4. Mau nambah karya? Copy satu blok <a class="card"> DAN blok
+     <div class="lightbox"> pasangannya, lalu ganti id + judulnya.
+  =====================================================================
+  -->
+
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#atas" class="brand">Fill's</a>
+      <nav aria-label="Navigasi utama">
+        <a href="#galeri">Karya</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#kontak" class="btn btn-small">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="blob blob-1" aria-hidden="true"></div>
+      <div class="blob blob-2" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <p class="eyebrow">Desainer Grafis</p>
+        <h1>Visual yang bikin orang <em>berhenti scroll.</em></h1>
+        <p class="lead">Kumpulan karya banner, poster, kartu nama, dan logo yang dirancang dengan rapi, berani, dan tetap enak dilihat.</p>
+        <div class="hero-cta">
+          <a href="#galeri" class="btn">Lihat Karya</a>
+          <a href="#kontak" class="btn btn-ghost">Ajak Kolaborasi</a>
+        </div>
+        <ul class="stats" aria-label="Ringkasan">
+          <li><strong>4</strong><span>Banner</span></li>
+          <li><strong>4</strong><span>Poster</span></li>
+          <li><strong>3</strong><span>Kartu Nama</span></li>
+          <li><strong>6</strong><span>Logo</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- GALERI -->
+    <section class="gallery" id="galeri">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Karya Pilihan</h2>
+          <p>Klik karya untuk melihat versi lebih besar.</p>
+        </div>
+
+        <!-- Filter kategori (murni CSS, pakai radio button) -->
+        <div class="filter" role="radiogroup" aria-label="Filter kategori">
+          <input type="radio" name="kategori" id="f-all" checked>
+          <label for="f-all">Semua</label>
+          <input type="radio" name="kategori" id="f-banner">
+          <label for="f-banner">Banner</label>
+          <input type="radio" name="kategori" id="f-poster">
+          <label for="f-poster">Poster</label>
+          <input type="radio" name="kategori" id="f-kartu">
+          <label for="f-kartu">Kartu Nama</label>
+          <input type="radio" name="kategori" id="f-logo">
+          <label for="f-logo">Logo</label>
+        </div>
+
+        <!-- ===== BANNER ===== -->
+        <div class="cat r-banner" id="banner">
+          <div class="cat-head">
+            <h3>Banner</h3>
+            <span class="count">4 karya</span>
+          </div>
+          <div class="grid grid-banner">
+
+            <a class="card" id="item-b1" href="#view-b1" style="--img:url('images/banner1.png');--g:var(--g1)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Banner Promo Juice</h4><span>Banner · Promosi</span></div>
+            </a>
+            <a class="card" id="item-b2" href="#view-b2" style="--img:url('images/banner2.png');--g:var(--g2)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Banner Opening Registration</h4><span>Banner · Event</span></div>
+            </a>
+            <a class="card" id="item-b3" href="#view-b3" style="--img:url('images/banner3.png');--g:var(--g4)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Banner UMKM</h4><span>Banner · Digital</span></div>
+            </a>
+            <a class="card" id="item-b4" href="#view-b4" style="--img:url('images/banner4.png');--g:var(--g3)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Banner KKN</h4><span>Banner · Promosi</span></div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- ===== POSTER ===== -->
+        <div class="cat r-poster" id="poster">
+          <div class="cat-head">
+            <h3>Poster</h3>
+            <span class="count">4 karya</span>
+          </div>
+          <div class="grid grid-poster">
+
+            <a class="card" id="item-p1" href="#view-p1" style="--img:url('images/poster1.png');--g:var(--g5)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Poster Pengiriman Paket</h4><span>Poster · Bisnis</span></div>
+            </a>
+            <a class="card" id="item-p2" href="#view-p2" style="--img:url('images/poster2.png');--g:var(--g2)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Poster Menu Makanan</h4><span>Poster · UMKM</span></div>
+            </a>
+            <a class="card" id="item-p3" href="#view-p3" style="--img:url('images/poster3.png');--g:var(--g6)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Poster Talas Bolu</h4><span>Poster · Produk</span></div>
+            </a>
+            <a class="card" id="item-p4" href="#view-p4" style="--img:url('images/poster4.png');--g:var(--g1)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Poster Lomba</h4><span>Poster · Event</span></div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- ===== KARTU NAMA ===== -->
+        <div class="cat r-kartu" id="kartu">
+          <div class="cat-head">
+            <h3>Kartu Nama</h3>
+            <span class="count">3 karya</span>
+          </div>
+          <div class="grid grid-kartu">
+
+            <a class="card" id="item-l1" href="#view-k1" style="--img:url('images/kartu1.png');--g:var(--g4)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Kartu Nama Studio Kreatif</h4><span>Kartu Nama · Branding</span></div>
+            </a>
+            <a class="card" id="item-k2" href="#view-k2" style="--img:url('images/kartu2.png');--g:var(--g3)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Kartu Nama CEO</h4><span>Kartu Nama · Personal</span></div>
+            </a>
+            <a class="card" id="item-k3" href="#view-k3" style="--img:url('images/kartu3.png');--g:var(--g6)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Kartu Nama Toko Laptop</h4><span>Kartu Nama · Bisnis</span></div>
+            </a>
+
+          </div>
+        </div>
+
+        <!-- ===== LOGO ===== -->
+        <div class="cat r-kartu" id="logo">
+          <div class="cat-head">
+            <h3>LOGO</h3>
+            <span class="count">6 karya</span>
+          </div>
+          <div class="grid grid-kartu">
+
+            <a class="card" id="item-l1" href="#view-l1" style="--img:url('images/A.png');--g:var(--g4)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Logo Airbnb</h4><span>Logo · Branding</span></div>
+            </a>
+            <a class="card" id="item-k2" href="#view-l2" style="--img:url('images/apple.png');--g:var(--g3)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Logo Apple</h4><span>Logo · Branding</span></div>
+            </a>
+            <a class="card" id="item-k3" href="#view-l3" style="--img:url('images/bmw.png');--g:var(--g6)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Logo BMW</h4><span>Logo · Branding</span></div>
+            </a>
+            <a class="card" id="item-k4" href="#view-l4" style="--img:url('images/burger.png');--g:var(--g6)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Logo Burger King</h4><span>Logo · Branding</span></div>
+            </a>
+            <a class="card" id="item-k3" href="#view-l5" style="--img:url('images/cnn.png');--g:var(--g6)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Logo CNN</h4><span>Logo · Branding</span></div>
+            </a>
+            <a class="card" id="item-k3" href="#view-l6" style="--img:url('images/coca.png');--g:var(--g6)">
+              <div class="thumb-wrap"><div class="thumb"></div></div>
+              <div class="meta"><h4>Logo CocaCola</h4><span>Logo · Branding</span></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TENTANG -->
+    <section class="about" id="tentang">
+      <div class="wrap about-grid">
+        <div>
+          <h2>Tentang Saya</h2>
+          <p>Halo, saya <strong>Fill's</strong>, desainer grafis yang suka bikin tampilan sederhana tapi nempel di ingatan.</p>
+          <p>Saya mengerjakan banner, poster, kartu nama, dan Logo untuk bisnis, komunitas, dan acara, dari ide awal sampai file siap cetak.</p>
+        </div>
+        <ul class="chips" aria-label="Keahlian">
+          <li>Branding</li>
+          <li>Tipografi</li>
+          <li>Layout</li>
+          <li>Ilustrasi</li>
+          <li>Siap Cetak</li>
+          <li>Media Sosial</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="contact" id="kontak">
+      <div class="wrap contact-box">
+        <h2>Punya proyek? Yuk ngobrol.</h2>
+        <p>Ceritakan kebutuhan desainmu, nanti kita cari ide terbaiknya bareng.</p>
+        <div class="contact-links">
+          <a class="btn" href="#">Email</a>
+          <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">Instagram</a>
+          <a class="btn btn-ghost" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>© 2026 Fill's. Semua hak dilindungi.</span>
+      <a href="#atas">Kembali ke atas ↑</a>
+    </div>
+  </footer>
+
+  <!-- ================== LIGHTBOX ================== -->
+  <!-- Banner -->
+  <div class="lightbox r-banner" id="view-b1" style="--img:url('images/banner1.png');--g:var(--g1)">
+    <a class="lb-bg" href="#item-b1" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Banner Promo Juice</h3><p>Banner · Promosi. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-b1" aria-label="Tutup">✕</a>
+  </div>
+  <div class="lightbox r-banner" id="view-b2" style="--img:url('images/banner2.png');--g:var(--g2)">
+    <a class="lb-bg" href="#item-b2" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Banner Opening Registration</h3><p>Banner · Event. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-b2" aria-label="Tutup">✕</a>
+  </div>
+  <div class="lightbox r-banner" id="view-b3" style="--img:url('images/banner3.png');--g:var(--g4)">
+    <a class="lb-bg" href="#item-b3" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Banner UMKM</h3><p>Banner · Digital. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-b3" aria-label="Tutup">✕</a>
+  </div>
+  <div class="lightbox r-banner" id="view-b4" style="--img:url('images/banner4.png');--g:var(--g3)">
+    <a class="lb-bg" href="#item-b4" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Banner Diskon KKN</h3><p>Banner · Promosi. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-b4" aria-label="Tutup">✕</a>
+  </div>
+
+  <!-- Poster -->
+  <div class="lightbox r-poster" id="view-p1" style="--img:url('images/poster1.png');--g:var(--g5)">
+    <a class="lb-bg" href="#item-p1" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Poster Pengiriman Paket</h3><p>Poster · Bisnis. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-p1" aria-label="Tutup">✕</a>
+  </div>
+  <div class="lightbox r-poster" id="view-p2" style="--img:url('images/poster2.png');--g:var(--g2)">
+    <a class="lb-bg" href="#item-p2" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Poster Menu Makanan</h3><p>Poster · UMKM. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-p2" aria-label="Tutup">✕</a>
+  </div>
+  <div class="lightbox r-poster" id="view-p3" style="--img:url('images/poster3.png');--g:var(--g6)">
+    <a class="lb-bg" href="#item-p3" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Poster Talas Bolu</h3><p>Poster · Produk. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-p3" aria-label="Tutup">✕</a>
+  </div>
+  <div class="lightbox r-poster" id="view-p4" style="--img:url('images/poster4.png');--g:var(--g1)">
+    <a class="lb-bg" href="#item-p4" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Poster Lomba</h3><p>Poster · Event. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-p4" aria-label="Tutup">✕</a>
+  </div>
+
+  <!-- Kartu Nama -->
+  <div class="lightbox r-kartu" id="view-k1" style="--img:url('images/kartu1.png');--g:var(--g4)">
+    <a class="lb-bg" href="#item-l1" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Kartu Nama Studio Kreatif</h3><p>Kartu Nama · Branding. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-l1" aria-label="Tutup">✕</a>
+  </div>
+  <div class="lightbox r-kartu" id="view-k2" style="--img:url('images/kartu2.png');--g:var(--g4)">
+    <a class="lb-bg" href="#item-l2" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Kartu Nama CEO</h3><p>Kartu Nama · Branding. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-l2" aria-label="Tutup">✕</a>
+  </div>
+  <div class="lightbox r-kartu" id="view-k3" style="--img:url('images/kartu3.png');--g:var(--g4)">
+    <a class="lb-bg" href="#item-l2" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Kartu Nama Toko Laptop</h3><p>Kartu Nama · Branding. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-l2" aria-label="Tutup">✕</a>
+  </div>
+
+  <!-- Logo -->
+  <div class="lightbox r-kartu" id="view-l1" style="--img:url('images/A.png');--g:var(--g4)">
+    <a class="lb-bg" href="#item-l1" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Logo AirBnb</h3><p>Logo · Branding. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-l1" aria-label="Tutup">✕</a>
+  </div>
+  <div class="lightbox r-kartu" id="view-l2" style="--img:url('images/apple.png');--g:var(--g3)">
+    <a class="lb-bg" href="#item-k2" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Logo Apple</h3><p>Logo · Branding. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-l2" aria-label="Tutup">✕</a>
+  </div>
+  <div class="lightbox r-kartu" id="view-l3" style="--img:url('images/bmw.png');--g:var(--g6)">
+    <a class="lb-bg" href="#item-k3" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Logo BMW</h3><p>Logo · Branding. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-l3" aria-label="Tutup">✕</a>
+  </div>
+  <div class="lightbox r-kartu" id="view-l4" style="--img:url('images/burger.png');--g:var(--g6)">
+    <a class="lb-bg" href="#item-k4" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Logo Burger King</h3><p>Logo · Branding. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-l4" aria-label="Tutup">✕</a>
+  </div>
+  <div class="lightbox r-kartu" id="view-l5" style="--img:url('images/cnn.png');--g:var(--g6)">
+    <a class="lb-bg" href="#item-k5" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Logo CNN</h3><p>Logo · Branding. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-l5" aria-label="Tutup">✕</a>
+  </div>
+  <div class="lightbox r-kartu" id="view-l6" style="--img:url('images/coca.png');--g:var(--g6)">
+    <a class="lb-bg" href="#item-k6" aria-label="Tutup"></a>
+    <figure class="lb-fig"><div class="lb-img"></div>
+      <figcaption><h3>Logo CocaCola</h3><p>Logo · Branding. Tulis deskripsi singkat karya di sini.</p></figcaption></figure>
+    <a class="lb-close" href="#item-l6" aria-label="Tutup">✕</a>
+  </div>
+</body>
+</html>
